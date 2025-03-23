@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: hsl(213, 47%, 45%) !important; /* Very light blue background */
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 210 60% 97%; /* Very light blue background */
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 16 100% 66%; /* Coral orange */
+    --primary-foreground: 0 0% 0%; /* Black text */
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 16 100% 66%; /* Coral orange */
+    --radius: 0.5rem;
+    --chart-1: 16 100% 66%; /* Coral orange */
+    --chart-2: 262 83% 58%;
+    --chart-3: 316 70% 50%;
+    --chart-4: 174 84% 32%;
+    --chart-5: 43 96% 56%;
+    --sidebar-background: 210 60% 97%; /* Very light blue */
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 16 100% 66%; /* Coral orange */
+    --sidebar-primary-foreground: 0 0% 0%; /* Black text */
+    --sidebar-accent: 210 40% 96.1%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 16 100% 66%; /* Coral orange */
+  }
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 16 100% 66%; /* Coral orange */
+    --primary-foreground: 0 0% 0%; /* Black text */
+    --secondary: 217 32% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 32% 17%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217 32% 17%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 16 100% 66%; /* Coral orange */
+    --chart-1: 16 100% 66%; /* Coral orange */
+    --chart-2: 262 83% 58%;
+    --chart-3: 316 70% 50%;
+    --chart-4: 174 84% 32%;
+    --chart-5: 43 96% 56%;
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 16 100% 66%; /* Coral orange */
+    --sidebar-primary-foreground: 0 0% 0%; /* Black text */
+    --sidebar-accent: 217 32% 17%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 32% 17%;
+    --sidebar-ring: 16 100% 66%; /* Coral orange */
+  }
+}
+
+@layer base {
+  button {
+    background-color: hsl(var(--primary)) !important; /* Coral orange buttons */
+    color: black !important; /* Black text for all buttons */
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button.undo,
+  button.redo {
+    background-color: hsl(var(--primary)) !important; /* Coral orange for Undo/Redo buttons */
+    color: black !important; /* Black text */
+  }
+
+  button:hover {
+    opacity: 0.9;
+  }
+
+  .popup button {
+    background-color: hsl(var(--primary)) !important;
+    color: black !important; /* Black text */
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
